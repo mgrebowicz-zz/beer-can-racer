@@ -13,6 +13,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var racesRouter = require('./routes/races');
+var profilesRouter = require('./routes/profiles');
 
 var app = express();
 
@@ -33,6 +34,25 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(function(req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
+app.use('/profiles', profilesRouter);
+
+app.use(function (req, res, next) {
+  // Check the users document to 
+  // see if the bio is empty or not
+  // if empty redirect to /profile/edit
+  // else next();
+  if(req.user && !req.user.bio) {
+    res.redirect('/profiles/edit');
+  } else {
+    next();
+  }
+});
 
 app.use('/', indexRouter);
 app.use('/races', racesRouter);
