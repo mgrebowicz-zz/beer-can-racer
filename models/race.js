@@ -19,7 +19,11 @@ const raceSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
-    }
+    },
+    // participants: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User'
+    // }]
 }, {
     timestamps: true
 });

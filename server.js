@@ -14,6 +14,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var racesRouter = require('./routes/races');
 var profilesRouter = require('./routes/profiles');
+var reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -41,7 +42,6 @@ app.use(function(req, res, next) {
 });
 
 app.use('/profiles', profilesRouter);
-app.use('/races', racesRouter);
 
 app.use(function (req, res, next) {
   // Check the users document to 
@@ -56,6 +56,8 @@ app.use(function (req, res, next) {
   }
 });
 
+app.use('/', reviewsRouter);
+app.use('/races', racesRouter);
 app.use('/', indexRouter);
 
 

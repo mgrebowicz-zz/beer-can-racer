@@ -3,10 +3,10 @@ const router = express.Router();
 const racesCtrl = require('../controllers/races');
 const isLoggedIn = require('../config/auth');
 
-router.get('/', racesCtrl.index);
-router.get('/new', racesCtrl.new);
-router.get('/:id', racesCtrl.show);
-router.post('/', racesCtrl.create);
+router.get('/', isLoggedIn, racesCtrl.index);
+router.get('/new', isLoggedIn, racesCtrl.new);
+router.get('/:id', isLoggedIn, racesCtrl.show);
+router.post('/', isLoggedIn, racesCtrl.create);
 
 
 module.exports = router;
