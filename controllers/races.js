@@ -20,11 +20,21 @@ function show(req, res) {
 function newRace(req, res) {
     res.render('races/new', { title: 'Start a Race' })
 };
+
 function create(req, res) {
-    const race = new Race(req.body);
-    race.save(function(err) {
-        if(err) return res.render('races/new');
-        res.redirect('races/show')
+    req.body.user = req.user._id
+
+    Race.create(req.body, function (err, race) {
+        if (err) console.log(err)
+        res.redirect(`/races/${race._id}`);
     });
 };
+
+// function create(req, res) {
+//     const race = new Race(req.body);
+//     race.save(function(err) {
+//         if(err) return res.render('races/new');
+//         res.redirect('races/show')
+//     });
+// };
 

@@ -11,6 +11,7 @@
 
 <body>
     <nav>
+        <div id='logo'>Beer Can Racer</div>
         <% if (user) { %>
             <a href="/races" <%- title === 'All Races' ? 'class="active"' : '' %>>ALL RACES</a> ||
             <a href="/races/new" <%- title === 'Start a Race' ? 'class="active"' : '' %>>

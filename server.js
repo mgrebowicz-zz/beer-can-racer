@@ -48,6 +48,7 @@ app.use(function (req, res, next) {
   // see if the bio is empty or not
   // if empty redirect to /profile/edit
   // else next();
+  console.log(req.user)
   if(req.user && !req.user.bio) {
     res.redirect('/profiles/edit');
   } else {

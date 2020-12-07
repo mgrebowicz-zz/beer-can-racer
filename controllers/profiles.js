@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const { request } = require('../server');
 
 module.exports = {
     edit,
@@ -13,10 +14,11 @@ function show(req, res) {
 }
  
 function updateProfile(req, res) {
-    User.findById(req.params.id, req.body, { new: true}, function(err, user){
-        console.log(req.body);
-        res.redirect('profiles/show', { title: 'My Profile'} );
-    });
+    console.log(req.body)
+    req.user.bio = req.body.bio;
+        req.user.save(function(err){
+            res.redirect(`/profiles/${req.user._id}`);
+    }); 
 };
 
 function edit(req, res) {

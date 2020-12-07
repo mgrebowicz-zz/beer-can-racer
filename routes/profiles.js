@@ -8,6 +8,6 @@ router.get('/edit', profilesCtrl.edit);
 //GET //profiles/:id
 router.get('/:id', profilesCtrl.show)
 //PUT /profiles/:id
-router.put('/:id', isLoggedIn, profilesCtrl.update);
+router.put('/', isLoggedIn, profilesCtrl.update);
 
 module.exports = router;

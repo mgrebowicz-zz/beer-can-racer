@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<form id="add-bio" action="/profiles/<%= user._id %>" method="PUT">    
+<form id="add-bio" action="/profiles?_method=PUT" method="POST">    
     <textarea name="bio" form_id="add-bio" rows="4" cols="50" placeholder="Enter your bio here..."></textarea>
     <br>
     <input type="submit" value="Submit Bio">

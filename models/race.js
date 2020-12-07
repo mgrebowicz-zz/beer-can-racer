@@ -11,11 +11,15 @@ const raceSchema = new Schema({
         required: true
     },
     date: {
-        type: Number,
+        type: Date,
         default: function () {
             return new Date().getFullYear();
         }
-    } 
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 }, {
     timestamps: true
 });
