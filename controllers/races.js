@@ -8,15 +8,23 @@ module.exports = {
 }
 
 function index(req, res) {
-    res.render('races/index', { title: 'All Races' })
+    Race.find({}, function(err, races) {
+        res.render('races/index', { title: 'All Races', races })
+    });
 };
 function show(req, res) {
-    
+    Race.findById(req.params.id, function (err, race) {
+        res.render('races/show', { title: 'Race Details', race });    
+    });
 };
 function newRace(req, res) {
     res.render('races/new', { title: 'Start a Race' })
 };
 function create(req, res) {
-
+    const race = new Race(req.body);
+    race.save(function(err) {
+        if(err) return res.render('races/new');
+        res.redirect('races/show')
+    });
 };
 

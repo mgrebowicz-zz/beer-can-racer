@@ -12,9 +12,9 @@
 <body>
     <nav>
         <% if (user) { %>
-            <a href="/races" <%- title === 'All Races' ? 'class="active"' : '' %>>ALL RACES</a>
+            <a href="/races" <%- title === 'All Races' ? 'class="active"' : '' %>>ALL RACES</a> ||
             <a href="/races/new" <%- title === 'Start a Race' ? 'class="active"' : '' %>>
-            START A RACE</a>
+            START A RACE</a> || 
             <a href="/logout">Logout</a>
         <% } else { %>
             <a href="/auth/google">Login</a>

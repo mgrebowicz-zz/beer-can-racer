@@ -41,6 +41,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/profiles', profilesRouter);
+app.use('/races', racesRouter);
 
 app.use(function (req, res, next) {
   // Check the users document to 
@@ -55,7 +56,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/races', racesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

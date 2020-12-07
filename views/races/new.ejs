@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<form id="new-race" action="/races" method="POST">
+    <label>Title</label>
+    <br>
+    <input type="text" name="title">
+    <br>
+    <label>Description</label>
+    <br>
+    <input type="text" name="description">
+    <br>
+    <label>Date</label>
+    <br>
+    <input type="datetime-local" name="date">
+    <br>
+    <input type="submit" value="Add Race">
+</form>
+
+<%- include('../partials/footer') %>
