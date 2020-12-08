@@ -17,6 +17,9 @@
             <a href="/races/new" <%- title === 'Start a Race' ? 'class="active"' : '' %>>
             START A RACE</a> || 
             <a href="/logout">Logout</a>
+            <a href="/profiles/<%= user._id %>">
+                <img src="<%= user.avatar %>" alt="Avatar">
+            </a>
         <% } else { %>
             <a href="/auth/google">Login</a>
         <% } %>
