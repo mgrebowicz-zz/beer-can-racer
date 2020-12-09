@@ -12,6 +12,8 @@
 - MongoDB/Mongoose
 - Express.js
 - Node.js
+- Passport.js
+- Google People Api
 
 ### Getting Started
 - [Deploy the app](https://beer-can-racer.herokuapp.com/ "Deploy the app")
