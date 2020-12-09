@@ -2,7 +2,7 @@
 
 <% races.forEach(function(r) { %>
 <ul>
-    <li> <a href="/races/<%= r._id%>"><%= r.title %></a></li>
+    <li> <a href="/races/<%= r._id%>"><%= r.date.toDateString(); %> <%= r.title %></a></li>
 </ul>
 <% })%>
 

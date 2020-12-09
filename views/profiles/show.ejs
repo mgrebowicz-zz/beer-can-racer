@@ -20,7 +20,7 @@
             <% user.reviews.forEach(function(r) { %>
                 <% total += r.rating %>
                 <tr>
-                    <td class="review-user" id="styled-table"><img src="<%= r.userAvatar %>" alt="Avatar"></td>
+                    <td id="styled-table"><img src="<%= r.userAvatar %>" alt="Avatar" class="avatar"></td>
                     <td id="table-body"><%= r.createdAt.toLocaleDateString() %></td>
                     <td id="table-body"><%= r.content %></td>
                     <td id="table-body"><%= r.rating %></td>
@@ -46,16 +46,16 @@
     <% if (user) { %>
     <form id="add-review-form" method="POST" action="/profiles/<%= user._id %>/reviews">
         <div>Leave a review</div>
-        <textarea name="content" id="review-form-item"></textarea>
+        <textarea name="content"></textarea>
         <label>Rating:</label>
-        <select name="rating" id="review-form-item">
+        <select name="rating">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <input type="submit" value="Add Review" id="review-form-item">
+        <input type="submit" value="Add Review">
     </form>
     <% } %>
                 <%- include('../partials/footer') %>

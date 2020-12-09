@@ -21,7 +21,7 @@ function updateProfile(req, res) {
 };
 
 function edit(req, res) {
-    res.render('profiles/edit', { title: 'Edit Profile'} );
+    res.render('profiles/edit', { title: 'Welcome to Beer Can Racer!'} );
 };
 
 

@@ -44,9 +44,26 @@ nav > a {
   font-weight: bold;
 }
 
+.avatar {
+    border: thin solid palegoldenrod;
+}
+
 body > main {
   /*border: 10px solid red;*/
 }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+/* Profiles show page */
 
 #show-page {
   border: thin solid palegoldenrod;
@@ -93,9 +110,14 @@ button {
   color: red;
 }
 
-#review-form-item {
+textarea, input, select {
   background-color: blanchedalmond;
   color: #436A92;
 }
+
+img {
+   border: thin solid palegoldenrod;
+}
+
 
 
