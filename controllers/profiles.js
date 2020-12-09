@@ -14,7 +14,6 @@ function show(req, res) {
 }
  
 function updateProfile(req, res) {
-    console.log(req.body)
     req.user.bio = req.body.bio;
         req.user.save(function(err){
             res.redirect(`/profiles/${req.user._id}`);

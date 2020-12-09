@@ -18,10 +18,10 @@
             START A RACE</a> || 
             <a href="/logout">Logout</a>
             <a href="/profiles/<%= user._id %>">
-                <img src="<%= user.avatar %>" alt="Avatar">
+                <img class="avatar" src="<%= user.avatar %>" alt="Avatar">
             </a>
         <% } else { %>
-            <a href="/auth/google">Login</a>
+            <a href="/auth/google" class="login">Login&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
             
         

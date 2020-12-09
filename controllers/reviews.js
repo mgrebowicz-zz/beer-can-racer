@@ -20,10 +20,10 @@ function deleteReview(req, res, next) {
 
 function create(req, res) {
     User.findById(req.params.id, function(err, user) {
-        req.body.user = req.user_id;
+        req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-
+        
         user.reviews.push(req.body);
         user.save(function(err) {
             res.redirect(`/profiles/${user._id}`);
