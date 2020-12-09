@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: palegoldenrod;
 }
 
 body {
@@ -26,7 +26,7 @@ body > nav {
   padding: 16px 16px 16px;
   border-bottom: 1px solid rgba(0,0,0,.12);
   padding: 4px 14px 4px 14px;
-  background-color: white;
+  background-color:#436A92;  
   margin: 0;
 }
 
@@ -45,39 +45,20 @@ nav > a {
 }
 
 body > main {
-  border: 10px solid red;
+  /*border: 10px solid red;*/
 }
 
 #show-page {
-  
+  border: thin solid palegoldenrod;
+  padding: 15px;
+  background-color:#436A92;
 }
-
-#add-review-form {
-  border: 3px solid yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 table {
   margin-top: 15px;
   font-size: 12px;
-  border: thin solid black;
-  background-color: blanchedalmond;  
+  border: thin solid palegoldenrod;
+  background-color:#436A92;  
 }
 
 table thead th {
@@ -91,6 +72,30 @@ table thead th {
 table td {
   padding: 10px;
   text-align: center;
+}
+
+#add-review-form {
+  justify-self: center;
+  width: 30%;
+  position: relative;
+  left: 10%;
+  margin: 20px 0 20px 0;
+  border: thin solid palegoldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #436A92;
+} 
+
+button {
+  background-color: blanchedalmond;
+  color: red;
+}
+
+#review-form-item {
+  background-color: blanchedalmond;
+  color: #436A92;
 }
 
 
