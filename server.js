@@ -41,7 +41,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', indexRouter);
 app.use('/profiles', profilesRouter);
 
 app.use(function (req, res, next) {
@@ -57,6 +56,7 @@ app.use(function (req, res, next) {
   }
 });
 
+app.use('/', indexRouter);
 app.use('/', reviewsRouter);
 app.use('/races', racesRouter);
 
