@@ -41,6 +41,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use('/', indexRouter);
 app.use('/profiles', profilesRouter);
 
 app.use(function (req, res, next) {
@@ -58,7 +59,6 @@ app.use(function (req, res, next) {
 
 app.use('/', reviewsRouter);
 app.use('/races', racesRouter);
-app.use('/', indexRouter);
 
 
 // catch 404 and forward to error handler
