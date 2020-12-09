@@ -13,7 +13,7 @@
 - Express.js
 - Node.js
 - Passport.js
-- Google People Api
+- Google People API
 
 ### Getting Started
 - [Deploy the app](https://beer-can-racer.herokuapp.com/ "Deploy the app")
